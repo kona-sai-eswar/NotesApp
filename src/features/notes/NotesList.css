@@ -1,0 +1,52 @@
+.notes-display{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    background-color: aqua;
+}
+
+.notes-header{
+    text-align: center;
+}
+
+.notes-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    padding:20px
+}
+
+.note-card{
+    padding: 1rem;
+  border: 1px solid #000;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+  overflow-y: auto;
+}
+
+.note-title,
+.delete-button {
+  align-self: center;
+}
+
+.note-text {
+    text-align: left;
+    margin: 0.5rem 0;
+  }
+
+  .note-card::-webkit-scrollbar {
+    width: 6px;
+  }
+  .note-card::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 4px;
+  }
+
+
+
