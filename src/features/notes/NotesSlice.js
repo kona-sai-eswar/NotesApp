@@ -1,8 +1,8 @@
 import {createSlice} from "@reduxjs/toolkit"
-
+const savedNotes = JSON.parse(localStorage.getItem("notes")) || []
 let notesSlice = createSlice({
     name:"notes",
-    initialState:{noteList: JSON.parse(localStorage.getItem("notes"))|| []},
+    initialState:{noteList: savedNotes},
     reducers:{
         addNotes:(state,action)=>{
             state.noteList.push(action.payload)

@@ -48,5 +48,11 @@
     border-radius: 4px;
   }
 
+  .note-card {
+    width: 250px;
+    min-height: 150px;
+    word-wrap: break-word;
+  }
+
 
 
