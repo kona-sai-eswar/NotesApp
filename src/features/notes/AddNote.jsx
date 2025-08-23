@@ -23,7 +23,7 @@ const AddNote = () => {
           cols="30"
           placeholder="Enter your note here..."></textarea>
         <button onClick={()=>{
-    dispatch(addNotes({id: crypto.randomUUID(), title, note}))
+    dispatch(addNotes({id: crypto.randomUUID(), title, note, isFav:false}))
     setTitle("")
     setNote("")
 }}>Add Notes</button>

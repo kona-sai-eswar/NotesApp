@@ -55,4 +55,9 @@
   }
 
 
-
+.fav-button{
+    width: 20px; 
+    align-self: flex-end;
+    border-radius: 10px;  
+    text-align: center; 
+}
