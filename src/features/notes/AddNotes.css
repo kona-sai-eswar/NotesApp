@@ -1,4 +1,3 @@
-/* Add Notes form */
 .add-notes {
     border: 1px solid #e2e8f0;
     display: flex;
@@ -33,7 +32,7 @@
   .add-notes input:focus,
   .add-notes textarea:focus {
     outline: none;
-    border-color: #3b82f6; /* blue */
+    border-color: #3b82f6;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
   }
   
@@ -45,16 +44,15 @@
     font-size: 0.95rem;
     cursor: pointer;
     font-weight: 600;
-    background-color: #3b82f6; /* blue */
+    background-color: #3b82f6;
     color: #fff;
     transition: background 0.2s ease;
   }
   
   .add-notes button:hover {
-    background-color: #2563eb; /* darker blue */
+    background-color: #2563eb;
   }
   
-  /* Error message */
   .add-notes p[style] {
     font-size: 0.85rem;
     margin: 0;
