@@ -5,6 +5,7 @@ export function useNotesPersistence() {
   const notes = useSelector(state => state.notes.noteList);
 
   useEffect(() => {
-    localStorage.setItem("notes", JSON.stringify(notes));
+    const clean = notes.filter(n => n !== null && n !== undefined);
+    localStorage.setItem("notes", JSON.stringify(clean));
   }, [notes]);
 }

@@ -1,63 +1,131 @@
 .notes-display{
-    border: 2px solid black;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
     margin: 20px;
     padding: 20px;
-    background-color: aqua;
+    background-color: #f8fafc;
 }
 
 .notes-header{
     text-align: center;
+    font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .notes-list{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 20px;
-    padding:20px
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-.note-card{
-    padding: 1rem;
-  border: 1px solid #000;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+.note-card {
     display: flex;
     flex-direction: column;
-    height: 200px;
-  overflow-y: auto;
-}
-
-.note-title,
-.delete-button {
-  align-self: center;
-}
-
-.note-text {
-    text-align: left;
-    margin: 0.5rem 0;
-  }
-
-  .note-card::-webkit-scrollbar {
-    width: 6px;
-  }
-  .note-card::-webkit-scrollbar-thumb {
-    background: #aaa;
-    border-radius: 4px;
-  }
-
-  .note-card {
-    width: 250px;
+    justify-content: space-evenly; 
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: auto;
+    width: auto;
     min-height: 150px;
     word-wrap: break-word;
   }
 
+.note-card:hover {
+    transform: translateY(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
 
-.fav-button{
-    width: 20px; 
-    align-self: flex-end;
-    border-radius: 10px;  
-    text-align: center; 
+.note-title {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #1e293b; 
 }
+
+.fav-button {
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fbbf24; 
+  }
+
+  .save-btn,
+  .cancel-btn,
+  .edit-btn{
+    font-size: 0.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .note-text {
+    flex: 1;               
+    overflow-y: auto;       
+    margin: 0.5rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #334155;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .note-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.3rem;
+  }
+
+  .delete-button {
+    background-color: #ef4444; 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s ease;
+  }
+
+  .delete-button:hover {
+    background-color: #dc2626; 
+  }
+
+  .note-text::-webkit-scrollbar {
+    width: 6px;
+  }
+  .note-text::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 4px;
+  }
+
+  .note-header {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 0.3rem;
+  }
+
+  .edit-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: "Segoe UI", sans-serif;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .edit-textarea:focus {
+    outline: none;
+    border-color: #3b82f6; /* blue */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  }
+  

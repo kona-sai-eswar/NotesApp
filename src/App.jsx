@@ -10,6 +10,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     children: [
+      { path: "/", element: <Home /> },
       { path: "home", element: <Home /> },
       { path: "favorites", element: <Favorites /> },
     ],
@@ -20,7 +21,6 @@ function App() {
   useNotesPersistence();
   return (
     <RouterProvider router={router} />
-
   )
 }
 

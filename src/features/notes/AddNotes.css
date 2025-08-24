@@ -1,10 +1,61 @@
-.add-notes{
-    border: 2px solid black;
+/* Add Notes form */
+.add-notes {
+    border: 1px solid #e2e8f0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+    gap: 12px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: aqua;
-}
+    max-width: 400px;
+    border-radius: 12px;
+    background-color: #f8fafc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+  
+  .add-notes p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    color: #1e293b;
+  }
+  
+  .add-notes input,
+  .add-notes textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: "Segoe UI", sans-serif;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .add-notes input:focus,
+  .add-notes textarea:focus {
+    outline: none;
+    border-color: #3b82f6; /* blue */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  }
+  
+  .add-notes button {
+    align-self: flex-end;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #3b82f6; /* blue */
+    color: #fff;
+    transition: background 0.2s ease;
+  }
+  
+  .add-notes button:hover {
+    background-color: #2563eb; /* darker blue */
+  }
+  
+  /* Error message */
+  .add-notes p[style] {
+    font-size: 0.85rem;
+    margin: 0;
+  }

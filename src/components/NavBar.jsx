@@ -4,9 +4,9 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav>
-        <NavLink to="/home">Home</NavLink> | {" "}
-        <NavLink to="/favorites">Favorites</NavLink>
+    <nav className='navBar'>
+        <NavLink to="/home" className={({ isActive }) => isActive ? "active" : "navLink"}>Home</NavLink> | {" "}
+        <NavLink to="/favorites" className={({ isActive }) => isActive ? "active" : "navLink"}>Favorites</NavLink>
     </nav>
   )
 }
